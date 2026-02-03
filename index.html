@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREENHOUSE PROJECT</title>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+    <h1>GREENHOUSE PROJECT</h1>
+    <div class="people">
+        <div class="members">
+            <h2>Members</h2>
+                <ul>
+                    <!-- Add links to personal pages when available -->
+                    <li><a href="">Tyler Carver</a></li>
+                    <li><a href="">Clair Malik</a></li>
+                    <li><a href="">Luke Portugal</a></li>
+                    <li><a href="">Ben Intorn</a></li>
+                </ul>
+        </div>
+        <div class="mentors">
+            <h2>Mentors</h2>
+            <ul>
+                <li><a href="" >Chuck Garsha</a></li>
+                <li><a href="">Jackie Bastardi</a></li>
+                <li><a href="">Olivera Notaros</a></li>
+            </ul>
+        </div>
+        <br>
+    </div>
+	<div class="image">
+		<img src="T:\Projects\ece-sr-design\www\AY25\greenhouse\plant_estimator.png" alt="image showing height estimation teqnique">
+	</div>
+    <div class="main" id="main-content">
+        <h2>Project Overview</h2>
+            <div>
+                <h3>Summary</h3>
+				<p> This project focuses on the design of an automated greenhouse monitoring system
+				that uses image-based height estimation to eventually continously adjust water and 
+				light levels to optimze plant growth. This system uses embedded camera systems,
+				computer vision, potentially machine learning, and backened software to collect and 
+				process images. With the data we collect from the plants, such as plant height,
+				plant general health, we then hope to proactivley adjust environmental parameters, 
+				such as dynamical changing the lighting schedule.  
+            </div>
+            <div>
+                <h3>Project Background</h3>
+                <p>
+                    The project currently has fan, light, and water control, as well as a ph sensor and electrical conductivity sensor. It currently successfully runs water throughout the greenhouse. Plants have been successfully grown inside of the greenhouse.
+                </p>
+            </div>
+            <div>
+                <h3>Constraints</h3>
+                <p>
+                    The greenhouse is a self contained unit, that is roughly the size of a dresser. It 
+                    is powered by a standard wall outlet. We want the machine learning model to be locally o
+                    the rasberry pi in the greenhouse.
+                </p>
+            </div>
+    </div>
+	<div class="image">
+		<img src="T:\Projects\ece-sr-design\www\AY25\greenhouse\greenhouse.jpg" alt="image showing height estimation teqnique">
+	</div>
+    <div class="timeline">
+        <h3>Timeline</h3>
+        <ul>
+            <li>Milestone 1</li>
+                <p>Set Up camera system to record plant growth</p>
+            <li>Milestone 2</li>
+                <p>Set up machine learning model to analyze plant dimensions</p>
+            <li>Milestone 3</li>
+                <p>Display data in graphs</p>
+        </ul>
+    </div>
+	
+</body>
+</html>
