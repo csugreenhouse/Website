@@ -1,86 +1,194 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="css/style.css">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GREENHOUSE PROJECT</title>
+    <title>GAIA | CSU Greenhouse Senior Design Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:ital@0;1&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="header"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
-    </script>
-    <h1>GREENHOUSE PROJECT</h1>
-    <div class="people">
-        <div class="members">
-            <h2>Members</h2>
-                <ul>
-                    <!-- Add links to personal pages when available -->
-                    <li><a href="">Tyler Carver</a></li>
-                    <li><a href="">Clair Malik</a></li>
-                    <li><a href="">Luke Portugal</a></li>
-                    <li><a href="">Ben Intorn</a></li>
-                </ul>
+
+    <nav>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#development">Development</a>
         </div>
-        <div class="mentors">
-            <h2>Mentors</h2>
-            <ul>
-                <li><a href="" >Chuck Garsha</a></li>
-                <li><a href="">Jackie Bastardi</a></li>
-                <li><a href="">Olivera Notaros</a></li>
-            </ul>
+        <a href="https://github.com/csugreenhouse" class="github-btn">GITHUB ➽</a>
+    </nav>
+
+    <header id="home">
+        <div class="hero">
+            <div class="hero-text left">
+                <p>Colorado State University<br>ECE Senior Design Project<br>Automated Greenhouse</p>
+            </div>
+            <h1>GAIA</h1>
+            <div class="hero-text right">
+                <p>In Collaboration with<br>the Horticulture Department</p>
+            </div>
         </div>
-        <br>
-    </div>
-	<div class="image">
-		<img src="T:\Projects\ece-sr-design\www\AY25\greenhouse\plant_estimator.png" alt="image showing height estimation teqnique">
-	</div>
-    <div class="main" id="main-content">
-        <h2>Project Overview</h2>
-            <div>
-                <h3>Summary</h3>
-				<p> This project focuses on the design of an automated greenhouse monitoring system
-				that uses image-based height estimation to eventually continously adjust water and 
-				light levels to optimze plant growth. This system uses embedded camera systems,
-				computer vision, potentially machine learning, and backened software to collect and 
-				process images. With the data we collect from the plants, such as plant height,
-				plant general health, we then hope to proactivley adjust environmental parameters, 
-				such as dynamical changing the lighting schedule.  
+
+        <div class="team-section">
+            <div class="team-group">
+                <span class="team-label">Senior Design Team</span>
+                <p>Tyler Carver, Kai Brennan</p>
             </div>
-            <div>
-                <h3>Project Background</h3>
+            <div class="team-group">
+                <span class="team-label">VIP Students Team</span>
+                <p>Elias Faughn, Mia White, Konstanz Searle, Taven Hartman</p>
+            </div>
+            <div class="team-group">
+                <span class="team-label">Professor & EIR Team</span>
+                <p>Prof. Olivera Notaros, Chuck Garsha, Jackie Bastardi, Randy Gray</p>
+            </div>
+        </div>
+    </header>
+
+    <!--Unfortunatley we do not have the full team photo just yet
+    <section class="team-photo-container">
+        <div class="content-wrapper">
+            <div class="photo-frame">
+                <img src="images/team.jpg" alt="GAIA Senior Design Team Photo">
+                <p class="photo-caption">The GAIA Project Team at Colorado State University</p>
+            </div>
+        </div>
+    </section>-->
+
+    <section id="overview">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Project Overview</h2>
+                <h3>Overview</h3>
+
                 <p>
-                    The project currently has fan, light, and water control, as well as a ph sensor and electrical conductivity sensor. It currently successfully runs water throughout the greenhouse. Plants have been successfully grown inside of the greenhouse.
-                </p>
-            </div>
-            <div>
-                <h3>Constraints</h3>
+This project focuses on the design of an automated greenhouse that uses image-based estimation to index each plant's information over time. We also record other metrics and sensors to ensure a beneficial growing environment. Our long-term goal is to make the greenhouse responsive to the current states of the plants, fully autonomously.                </p>
+
+
+
+                <h3>Importance</h3>
+
                 <p>
-                    The greenhouse is a self contained unit, that is roughly the size of a dresser. It 
-                    is powered by a standard wall outlet. We want the machine learning model to be locally o
-                    the rasberry pi in the greenhouse.
+                    Aquaponics is an expanding technique for modern environments, and a logical next step is to implement engineering methods to automate it. We are in close collaboration with the CSU Horticulture Department, which currently uses a system that ignores valuable plant data and is reliant on manual labor. Our project aims to create a more efficient system and to non-invasively measure the plants, reducing the strain of maintaining a greenhouse and providing automatic feedback.
                 </p>
+
+               
+
+                <h3>Highlighted Goals</h3>
+
+                <p>The work this semester seeks to provide a foundation to realize the ultimate 'automated' goal of the greenhouse. By creating many data tracking systems, we hope to make it possible in the coming semesters to apply machine learning to respond to the plants to create an ideal growing environment.</p>
+
+
             </div>
-    </div>
-	<div class="image">
-		<img src="T:\Projects\ece-sr-design\www\AY25\greenhouse\greenhouse.jpg" alt="image showing height estimation teqnique">
-	</div>
-    <div class="timeline">
-        <h3>Timeline</h3>
-        <ul>
-            <li>Milestone 1</li>
-                <p>Set Up camera system to record plant growth</p>
-            <li>Milestone 2</li>
-                <p>Set up machine learning model to analyze plant dimensions</p>
-            <li>Milestone 3</li>
-                <p>Display data in graphs</p>
-        </ul>
-    </div>
-	
+
+            <div class="images">
+                <img src="images/greenhousewplants.png" alt="GAIA Greenhouse with Plants">
+                <img src="images/plant_estimator.png" alt="Plant Estimation System">
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="gray-bg">
+        <div class="content-wrapper">
+            <div class="divider">❧</div>
+            <h2>Project Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Phase 1: Metric Foundation</h3>
+                        <p>Establishing the automated pipeline for height and width requests with 1cm accuracy targets.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>Phase 2: Advanced Analysis</h3>
+                        <p>Moving from 2D metrics to area and 3D surface area estimation using multi-image processing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>Phase 3: Integration & UI</h3>
+                        <p>Finalizing hardware redundancy and launching the database UI for the Horticulture Dept.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="divider">❧</div>
+        </div>
+    </section>
+
+    <section id="development">
+        <div class="content-wrapper">
+            <h2>Detailed Project Specifications</h2>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Details & Items</th>
+                            <th>Objective / Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Primary Objectives</strong></td>
+                            <td>Height, Width, Area, and investigation into a 3D Surface Area Capture</td>
+                            <td>Automated twice-daily logs; 1cm accuracy goal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hardware Upgrades</strong></td>
+                            <td>SSD for Raspberry Pi, Hardwired Power for ESP32-Cam</td>
+                            <td>Fix network connectivity & power brownouts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hardware Repairs</strong></td>
+                            <td>Power stabilization, SD Card replacement, general repairs, and sensor calibration</td>
+                            <td>Ensure reliability for continuous data collection</td>
+                        </tr>
+                        <tr>
+                            <td><strong>New Sensors</strong></td>
+                            <td>Water Leak Detectors, Flow Sensors, Photoresistors</td>
+                            <td>Redundancy checks & automated email alerts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Risk Management</strong></td>
+                            <td>Server Crashes, Arduino Port Limits, Water Leaks</td>
+                            <td>Mitigation: Daily backups & ESP32 expansion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Horticulture Collab</strong></td>
+                            <td>Dept. Meetings & Objective Review</td>
+                            <td>Scheduled for February 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Final Delivery</strong></td>
+                            <td>E-Days Presentation & Timelapses</td>
+                            <td>April 24, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <span>CSU Automated Greenhouse Senior Design Project</span>
+                <span class="divider">|</span>
+                <span>GAIA</span>
+            </div>
+
+            <div class="footer-required-links">
+                <a href="https://advancing.colostate.edu/ENG/ECE_SRDESIGN/GIVE">Support our program</a>
+                <a href="https://www.engr.colostate.edu/ece/senior-design/?ay=2023">Other ECE Sr. Design projects</a>
+                <a href="https://www.engr.colostate.edu/ece/">ECE Department</a>
+                <a href="https://horticulture.agsci.colostate.edu/">Horticulture & LA Department</a>
+                <a href="http://www.colostate.edu/">CSU Main Website</a>
+                <a href="https://github.com/csugreenhouse">Project GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
