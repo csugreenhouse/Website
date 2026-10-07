@@ -446,3 +446,80 @@ footer {
         font-size: 0.85rem;
     }
 }
+/* Team Profiles Grid */
+/*.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}*/
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items on all rows, including the last one */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-card {
+    flex: 0 1 260px; /* Base width of 260px, doesn't stretch awkwardly */
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*.team-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}*/
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+}
+
+.member-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--green-dark);
+    background-color: var(--gray-light);
+}
+
+.team-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.25rem;
+}
+
+.member-major {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.member-focus {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
